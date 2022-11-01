@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  p Atualizando list de id #{doc._id} e título #{doc.título}
+  form(action='update' method='POST')
+    input(type='hidden' name='id' value=doc._id)
+    input(name='título' placeholder=doc.título)
+    input(type='submit')

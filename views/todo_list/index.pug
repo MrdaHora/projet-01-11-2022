@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  p= msg
+  table(class="uk-table uk-table-striped uk-table-small")
+      thead
+        tr
+          th ID
+          th Nome do animal
+          th Ação
+      tfoot
+      tbody
+        each list in todo_list
+          tr
+            td= list._id
+            td= list.título
+            td= list.descrição
+            td
+              a(href=list.url+'/update') Atualizar
+              span |
+              a(href=list.url+'/delete') Deletar

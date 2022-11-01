@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  p= msg
+  form(action='create' method='POST')
+    input(name='título' value='' placeholder='Insira o título')
+    input(name='descrição' value='' placeholder='Insira a descrição')
+    input(type='submit')
+
